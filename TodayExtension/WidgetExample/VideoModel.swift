@@ -1,5 +1,5 @@
 //
-//  VedioModel.swift
+//  VideoModel.swift
 //  WidgetExample
 //
 //  Created by Liu Chuan on 2018/5/2.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct VedioModel: Decodable {
+struct VideoModel: Decodable {
     let content: Content
 }
 

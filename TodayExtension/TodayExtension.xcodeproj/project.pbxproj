@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B488AB42401944C002328A4 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B488AB22401944B002328A4 /* VideoCell.swift */; };
+		6B488AB7240194E6002328A4 /* VideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B488AB6240194E6002328A4 /* VideoCell.xib */; };
 		6BE374E72098F26900456CBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE374E62098F26900456CBB /* AppDelegate.swift */; };
 		6BE374E92098F26900456CBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE374E82098F26900456CBB /* ViewController.swift */; };
 		6BE374EC2098F26900456CBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BE374EA2098F26900456CBB /* Main.storyboard */; };
@@ -16,9 +18,7 @@
 		6BE375022098F34600456CBB /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE375012098F34600456CBB /* TodayViewController.swift */; };
 		6BE375052098F34600456CBB /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BE375032098F34600456CBB /* MainInterface.storyboard */; };
 		6BE375092098F34600456CBB /* WidgetExample.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6BE374FC2098F34600456CBB /* WidgetExample.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		6BF318072099AB3800D73AA2 /* VedioCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BF318062099AB3800D73AA2 /* VedioCell.xib */; };
-		6BF318092099AB9200D73AA2 /* VedioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF318082099AB9200D73AA2 /* VedioCell.swift */; };
-		6BF3180B2099AE6900D73AA2 /* VedioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF3180A2099AE6900D73AA2 /* VedioModel.swift */; };
+		6BF3180B2099AE6900D73AA2 /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF3180A2099AE6900D73AA2 /* VideoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +46,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6B488AB22401944B002328A4 /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		6B488AB6240194E6002328A4 /* VideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoCell.xib; sourceTree = "<group>"; };
 		6BE374E32098F26900456CBB /* TodayExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodayExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BE374E62098F26900456CBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BE374E82098F26900456CBB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,9 +60,7 @@
 		6BE375012098F34600456CBB /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		6BE375042098F34600456CBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		6BE375062098F34600456CBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6BF318062099AB3800D73AA2 /* VedioCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VedioCell.xib; sourceTree = "<group>"; };
-		6BF318082099AB9200D73AA2 /* VedioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VedioCell.swift; sourceTree = "<group>"; };
-		6BF3180A2099AE6900D73AA2 /* VedioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VedioModel.swift; sourceTree = "<group>"; };
+		6BF3180A2099AE6900D73AA2 /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,9 +125,9 @@
 		6BE375002098F34600456CBB /* WidgetExample */ = {
 			isa = PBXGroup;
 			children = (
-				6BF3180A2099AE6900D73AA2 /* VedioModel.swift */,
-				6BF318082099AB9200D73AA2 /* VedioCell.swift */,
-				6BF318062099AB3800D73AA2 /* VedioCell.xib */,
+				6BF3180A2099AE6900D73AA2 /* VideoModel.swift */,
+				6B488AB22401944B002328A4 /* VideoCell.swift */,
+				6B488AB6240194E6002328A4 /* VideoCell.xib */,
 				6BE375012098F34600456CBB /* TodayViewController.swift */,
 				6BE375032098F34600456CBB /* MainInterface.storyboard */,
 				6BE375062098F34600456CBB /* Info.plist */,
@@ -181,15 +181,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = LC;
 				TargetAttributes = {
 					6BE374E22098F26900456CBB = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1130;
 						ProvisioningStyle = Automatic;
 					};
 					6BE374FB2098F34600456CBB = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1130;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -229,7 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BE375052098F34600456CBB /* MainInterface.storyboard in Resources */,
-				6BF318072099AB3800D73AA2 /* VedioCell.xib in Resources */,
+				6B488AB7240194E6002328A4 /* VideoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,8 +252,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BE375022098F34600456CBB /* TodayViewController.swift in Sources */,
-				6BF3180B2099AE6900D73AA2 /* VedioModel.swift in Sources */,
-				6BF318092099AB9200D73AA2 /* VedioCell.swift in Sources */,
+				6B488AB42401944C002328A4 /* VideoCell.swift in Sources */,
+				6BF3180B2099AE6900D73AA2 /* VideoModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +309,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -314,6 +317,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -347,6 +351,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -364,6 +369,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -371,6 +377,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -396,6 +403,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -411,7 +419,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LC.TodayExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -427,7 +435,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LC.TodayExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -442,7 +450,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.LC.TodayExtension.WidgetExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -457,7 +465,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.LC.TodayExtension.WidgetExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

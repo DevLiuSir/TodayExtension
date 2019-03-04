@@ -1,5 +1,5 @@
 //
-//  VedioCell.swift
+//  VideoCell.swift
 //  WidgetExample
 //
 //  Created by Liu Chuan on 2018/5/2.
@@ -8,27 +8,25 @@
 
 import UIKit
 
-class VedioCell: UITableViewCell {
-
+class VideoCell: UITableViewCell {
     
     /// 电影名
-    @IBOutlet weak var vedioTitle: UILabel!
+    @IBOutlet weak var videoTitle: UILabel!
+    
+    /// 电影图片
+    @IBOutlet weak var videoImage: UIImageView!
     
     /// 类型ID
     @IBOutlet weak var typeID: UILabel!
-    
-    /// 电影图片
-    @IBOutlet weak var vedioImage: UIImageView!
     
     
     // MARK: - 加载nib时候调用
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        
         // 设置图片的圆角
-        vedioImage.layer.cornerRadius = 10
-        vedioImage.layer.masksToBounds = true
+        videoImage.layer.cornerRadius = 10
+        videoImage.layer.masksToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -21,8 +21,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     /// 表格
     @IBOutlet weak var table: UITableView!
+    
     /// 模型
-    private lazy var vedioModels = [VedioModel]()
+    private lazy var videoModels = [VideoModel]()
     
     /// More button
     private lazy var moreBtn: UIButton = {
@@ -51,7 +52,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         table.tableFooterView = moreBtn
         table.dataSource = self
         table.delegate = self
-        table.register(UINib(nibName: "VedioCell", bundle: nil), forCellReuseIdentifier: identifier)
+        table.register(UINib(nibName: "VideoCell", bundle: nil), forCellReuseIdentifier: identifier)
     }
     
     /// 更多按钮点击事件
@@ -125,10 +126,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         }
     }
     
-    
-    
 }
-
 
 // MARK: - 解析JSON数据
 extension TodayViewController {
@@ -146,8 +144,8 @@ extension TodayViewController {
             
             do {
                 print("开始解析...")
-                let downloadedChannels = try JSONDecoder().decode(VedioModel.self, from: data!)
-                self.vedioModels = [downloadedChannels]
+                let downloadedChannels = try JSONDecoder().decode(VideoModel.self, from: data!)
+                self.videoModels = [downloadedChannels]
                 // 简写
                 //self.vedioModels = try [JSONDecoder().decode(MusicModel.self, from: data!)]
                 DispatchQueue.main.async {
@@ -165,24 +163,24 @@ extension TodayViewController {
 extension TodayViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return vedioModels.count
+        return videoModels.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return vedioModels[section].content.list.count
+        return videoModels[section].content.list.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // 创建cell
-        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! VedioCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! VideoCell
         
         /// 图片网址
-        let url = vedioModels[indexPath.section].content.list[indexPath.row].img_url
+        let url = videoModels[indexPath.section].content.list[indexPath.row].img_url
         /// 电影名称
-        let title = vedioModels[indexPath.section].content.list[indexPath.row].title
+        let title = videoModels[indexPath.section].content.list[indexPath.row].title
         /// 类型ID
-        let id = vedioModels[indexPath.section].content.list[indexPath.row].type_id
+        let id = videoModels[indexPath.section].content.list[indexPath.row].type_id
         /// 图片URL
         let imageURL = URL(string: url)
         
@@ -192,8 +190,8 @@ extension TodayViewController: UITableViewDataSource, UITableViewDelegate {
         let imag = UIImage(data: da!)
         
         // 设置cell
-        cell.vedioImage.image = imag
-        cell.vedioTitle.text = title
+        cell.videoImage.image = imag
+        cell.videoTitle.text = title
         cell.typeID.text = "ID = \(id)"
         
         return cell
